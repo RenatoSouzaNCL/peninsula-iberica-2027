@@ -1,0 +1,41 @@
+VIA SINGULARIS TRAVEL · PENÍNSULA IBÉRICA 2027
+App de roteiro (PWA) · 29/05 a 21/06/2027
+
+ARQUIVOS
+  index.html            estrutura do app
+  styles.css            visual (cores de cada trecho, fontes)
+  app.js                funcionamento (telas, "hoje", mapas, reservas)
+  roteiro.json          TODO o conteúdo da viagem: dias, trajetos, hospedagens, reservas
+  sw.js                 guarda o app no celular para funcionar sem internet
+  manifest.webmanifest  nome e ícone para "Adicionar à tela inicial"
+  *.woff2, *.png, *.svg  fontes (licença OFL, ver OFL-fontes.txt) e ícones
+
+TESTAR NO COMPUTADOR
+  Abra um terminal nesta pasta e rode:  python -m http.server 8000
+  Acesse http://localhost:8000
+  Para simular um dia da viagem: http://localhost:8000/?hoje=2027-06-05
+
+O QUE O APP FAZ
+  - Antes da viagem: contagem regressiva e visão dos 5 trechos.
+  - Durante a viagem: abre direto no dia de hoje.
+  - Cada parada tem link para o Google Maps, e o roteiro a pé abre como rota.
+  - Aba Reservas: lista para marcar o que já foi comprado (fica salvo no aparelho).
+  - Depois do primeiro acesso, funciona sem internet (os mapas precisam de conexão).
+
+PUBLICAR (GitHub Pages)
+  1. Crie um repositório público, ex.: peninsula-iberica-2027
+  2. Envie TODOS os arquivos desta pasta (todos ficam na raiz, sem pastas)
+  3. Settings > Pages > Branch: main / (root) > Save
+  4. Abra o endereço https://SEU-USUARIO.github.io/peninsula-iberica-2027/ no celular
+     e use "Adicionar à tela inicial" (Android: menu do Chrome; iPhone: botão Compartilhar).
+
+ALTERAR O ROTEIRO
+  Edite roteiro.json e, em sw.js, aumente a VERSAO (v1 -> v2) antes de publicar,
+  para os celulares baixarem a versão nova.
+  Campos da agência/passageiro (vazios por enquanto): "passenger", "agency" > "whatsapp" e "email".
+
+PENDÊNCIAS DO ROTEIRO (aparecem como "A definir")
+  - Horário do ônibus Lloret -> Barcelona (08/06)
+  - Empresa e horários do ônibus Sevilha <-> Ronda (16/06)
+  - Trajeto a pé até The Loft House Madrid (20/06)
+  - Todos os horários de trens, ônibus e voos são de referência (2025): confirmar ao comprar.
