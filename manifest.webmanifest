@@ -1,7 +1,7 @@
 {
-  "name": "Via Singularis Travel · Península Ibérica 2027",
-  "short_name": "Península Ibérica",
-  "description": "Roteiro dia a dia: Portugal e Espanha, 29/05 a 21/06/2027",
+  "name": "Via Singularis Travel · Minha viagem",
+  "short_name": "Minha viagem",
+  "description": "Seu roteiro de viagem, dia a dia, mesmo sem internet",
   "id": "./",
   "start_url": "./",
   "scope": "./",
